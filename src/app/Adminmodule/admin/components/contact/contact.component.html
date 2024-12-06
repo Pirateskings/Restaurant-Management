@@ -1,0 +1,33 @@
+<div class="container mt-5">
+    <h2 class="mb-4">User Contact</h2>
+
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Subject</th>
+                    <th>Phone</th>
+                    <th>Date</th>
+                    <th>Suggestions</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let con of contact">
+                    <td>{{ con.id }}</td>
+                    <td>{{ con.name }}</td>
+                    <td>{{ con.email }}</td>
+                    <td>{{con.subject}}</td>
+                    <td>{{ con.phone }}</td>
+                    <td>{{ con.date }}</td>
+                    <td>{{ con.suggestion }}</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm" (click)="deleteContact(con.id)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>

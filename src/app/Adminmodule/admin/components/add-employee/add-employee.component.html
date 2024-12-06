@@ -1,0 +1,127 @@
+<div class="container mt-5">
+  <h2 class="mb-4">Employee Management</h2>
+
+  <!-- Add Employee Button -->
+  <button class="btn btn-primary mb-3" (click)="openEmployeeModal()">Add Employee</button>
+
+  <!-- Employee Table (Responsive) -->
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Position</th>
+          <th>Permissions</th>
+          <th>Salary</th>
+          <th>Total</th>
+          <th>Created Time</th>
+          <th>Update Time</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{ employee.id }}</td>
+          <td>{{ employee.name }}</td>
+          <td>{{ employee.email }}</td>
+          <td>{{ employee.phone }}</td>
+          <td>{{ employee.position }}</td>
+          <td>{{ employee.permissions }}</td>
+          <td>{{ employee.salary }}</td>
+          <td>{{employee.totalsalary}}</td>
+          <td>{{ employee.createdTime }}</td>
+          <td>{{ employee.updateTime }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm" (click)="openEmployeeModal(employee)">Edit</button>
+            <button class="btn btn-danger btn-sm" (click)="deleteEmployee(employee.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Employee Modal -->
+  <div class="modal" tabindex="-1" id="employeeModal">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-center">{{ selectedEmployee.id ? 'Update Employee' : 'Add Employee' }}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form (ngSubmit)="selectedEmployee.id ? updateEmployee() : saveEmployee()">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input
+                type="text"
+                id="name"
+                [(ngModel)]="selectedEmployee.name"
+                name="name"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                id="email"
+                [(ngModel)]="selectedEmployee.email"
+                name="email"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone</label>
+              <input
+                type="text"
+                id="phone"
+                [(ngModel)]="selectedEmployee.phone"
+                name="phone"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="position" class="form-label">Position</label>
+              <input
+                type="text"
+                id="position"
+                [(ngModel)]="selectedEmployee.position"
+                name="position"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="permissions" class="form-label">Permissions</label>
+              <input
+                type="text"
+                id="permissions"
+                [(ngModel)]="selectedEmployee.permissions"
+                name="permissions"
+                class="form-control"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="salary" class="form-label">Salary</label>
+              <input
+                type="number"
+                id="salary"
+                [(ngModel)]="selectedEmployee.salary"
+                name="salary"
+                class="form-control"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,137 @@
+<body>
+    <section id="booking" class="section">
+      <h2>Booking</h2>
+      <div class="booking-container">
+        <div class="place"><a [routerLink]="[]" fragment="branches">
+          <img src="https://img.freepik.com/premium-photo/restaurant-hotel-zermatt_865967-38967.jpg" alt="Place 1">
+          <p>#Location 1: Main Branch</p></a>
+        </div>
+        <div class="place"><a [routerLink]="[]" fragment="branches">
+          <img src="https://i.pinimg.com/originals/61/bd/51/61bd5179a561b6b4c0955651f6d98138.jpg" alt="Place 2">
+          <p>#Location 2: Riverside</p></a>
+        </div>
+        <div class="place"><a [routerLink]="[]" fragment="branches">
+          <img src="https://media.timeout.com/images/105371121/image.jpg" alt="Place 3">
+          <p>#Location 3: Downtown</p></a>
+        </div>
+      </div>
+      <form class="booking-form" (ngSubmit)="onSubmit()">
+        <h3>Book a Table</h3>
+        <input type="text" placeholder="*Full Name" name="name" [(ngModel)]="page.name" required>
+        <input type="email" placeholder="*Email" name="email" [(ngModel)]="page.email" required>
+        <input type="text" placeholder="*Phone Number" name="num" [(ngModel)]="page.number" required>
+
+        <select name="event" id="event" [(ngModel)]="page.event" [ngModelOptions]="{standalone: true}">
+          <option value="any">Any</option>
+          <option value="Events">Table</option>
+          <option value="Events">Events</option>
+          <option value="Banquets">Banquets</option>
+          <option value="Party">Party</option>
+          <option value="Others">Others</option>
+        </select>
+        
+        <input type="date" placeholder="*Booking Date" name="date" [(ngModel)]="page.date" required>
+        <textarea name="Address"  id="sug" [(ngModel)]="page.address" placeholder="*Address"></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    
+    <section id="testimonials" class="section">
+      <h2>Testimonials</h2>
+      <form class="review-form" (ngSubmit)="onTestimonials()">
+          <input type="text" name="name1" placeholder="*Your Name" [(ngModel)]="test.name" required />
+          <input type="email" name="email1" placeholder="*Your Email" [(ngModel)]="test.email" required />
+          <textarea name="review" placeholder="*Your Review"[(ngModel)]="test.review" required></textarea>
+          <input type="number"  name="rating" placeholder="*Rating (1-5)" min="1" max="5" required [(ngModel)]="test.rating" />
+          <button type="submit">Submit Review</button>
+      </form>
+
+      <div class="testimonial-container">
+          <div class="testimonial">
+              <img src="https://th.bing.com/th/id/R.6436b80234acd63503052140aca4feab?rik=Efo0fjg%2f8zu1pw&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f03%2fFree-cute-animal-wallpaper-HD.jpg&ehk=gpgW8380s9igd8n1IVE4YVCN64RDeqasFTjb5cRKGCo%3d&risl=&pid=ImgRaw&r=0" alt="Customer 1">
+              <p>"Amazing experience! The food and service were outstanding."</p>
+              <p>- John Doe</p>
+          </div>
+          <div class="testimonial">
+              <img src="https://th.bing.com/th/id/R.6436b80234acd63503052140aca4feab?rik=Efo0fjg%2f8zu1pw&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f03%2fFree-cute-animal-wallpaper-HD.jpg&ehk=gpgW8380s9igd8n1IVE4YVCN64RDeqasFTjb5cRKGCo%3d&risl=&pid=ImgRaw&r=0" alt="Customer 2">
+              <p>"Best dining experience ever. The chefs are true artists!"</p>
+              <p>- Sarah Lee</p>
+          </div>
+          <div class="testimonial">
+              <img src="https://th.bing.com/th/id/R.6436b80234acd63503052140aca4feab?rik=Efo0fjg%2f8zu1pw&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f03%2fFree-cute-animal-wallpaper-HD.jpg&ehk=gpgW8380s9igd8n1IVE4YVCN64RDeqasFTjb5cRKGCo%3d&risl=&pid=ImgRaw&r=0" alt="Customer 3">
+              <p>"Fantastic! Highly recommend for any food lover."</p>
+              <p>- Jane Smith</p>
+          </div>
+          <div class="testimonial">
+              <img src="https://th.bing.com/th/id/R.ca7e71496017d9047a5f8513b0ee0002?rik=hrpJRzz3eGmgtg&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f03%2fCute-Animal-Wallpaper-HD-desktop.jpg&ehk=0Ff%2bletUnkmWClxoSKmtGwWoBxNtGNRRJev7rfh52g8%3d&risl=&pid=ImgRaw&r=0" alt="Customer 4">
+              <p>"A culinary journey. Every dish was exquisite."</p>
+              <p>- Mike Thompson</p>
+          </div>
+          <div class="testimonial">
+              <img src="https://th.bing.com/th/id/R.ca7e71496017d9047a5f8513b0ee0002?rik=hrpJRzz3eGmgtg&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f03%2fCute-Animal-Wallpaper-HD-desktop.jpg&ehk=0Ff%2bletUnkmWClxoSKmtGwWoBxNtGNRRJev7rfh52g8%3d&risl=&pid=ImgRaw&r=0" alt="Customer 5">
+              <p>"Perfect ambiance and food. I'll be back for sure!"</p>
+              <p>- Emma Brown</p>
+          </div>
+          <div class="testimonial">
+              <img src="https://th.bing.com/th/id/R.ca7e71496017d9047a5f8513b0ee0002?rik=hrpJRzz3eGmgtg&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f03%2fCute-Animal-Wallpaper-HD-desktop.jpg&ehk=0Ff%2bletUnkmWClxoSKmtGwWoBxNtGNRRJev7rfh52g8%3d&risl=&pid=ImgRaw&r=0" alt="Customer 6">
+              <p>"The best dining experience I’ve had in years!"</p>
+              <p>- Olivia Wilson</p>
+          </div>
+      </div>
+  </section>
+  
+
+  
+  <section id="our-team" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Our Team</h2>
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6 text-center" *ngFor="let item of content">
+          <div class="card border-0">
+            <img
+              [src]="item.image"
+              class="card-img-top rounded-circle mx-auto"
+              alt="Chef 1"
+              style="width: 150px; height: 150px; object-fit: cover;"
+            />
+            <div class="card-body">
+              <h3 class="card-title">{{item.name}}</h3>
+              <p class="text-muted">{{item.destination}}</p>
+              <p>
+                {{item.ref}}
+              </p>
+              <div class="social-icons">
+                <a routerLink="#" class="text-dark me-2"><i class="fa-brands fa-facebook"></i></a>
+                <a routerLink="#" class="text-dark me-2"><i class="fa-brands fa-instagram"></i></a>
+                <a routerLink="#" class="text-dark"><i class="fa-brands fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>    
+
+      </div>
+    </div>
+  </section>
+  
+
+    
+    <section id="branches" class="section">
+      <h2>Our Branches</h2>
+      <div class="branch-container">
+        <div class="branch">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120411.8429717013!2d76.91910705397208!3d11.051197505207142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba857bc9b5ea9af%3A0x317ea10df48c4678!2sCoimbatore%20International%20Airport!5e1!3m2!1sen!2sin!4v1728728108679!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <p>#Location 1: Address and Details</p>
+        </div>
+        <div class="branch">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120411.8429717013!2d76.91910705397208!3d11.051197505207142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba857bc9b5ea9af%3A0x317ea10df48c4678!2sCoimbatore%20International%20Airport!5e1!3m2!1sen!2sin!4v1728728108679!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <p>#Location 2: Address and Details</p>
+        </div>
+        <div class="branch">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120411.8429717013!2d76.91910705397208!3d11.051197505207142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba857bc9b5ea9af%3A0x317ea10df48c4678!2sCoimbatore%20International%20Airport!5e1!3m2!1sen!2sin!4v1728728108679!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <p>#Location 3: Address and Details</p>
+        </div>
+      </div>
+    </section>
+</body>

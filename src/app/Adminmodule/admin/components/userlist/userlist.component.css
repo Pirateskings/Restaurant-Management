@@ -1,0 +1,26 @@
+.table button{
+    width: 70px;
+    height: 50px;
+    padding: 6px;
+}
+
+.modal-content{
+    background: rgb(67, 61, 61);
+    color: rgb(231, 231, 238);
+}
+.modal-content h5{
+    font-size:35px;
+}
+.modal-content label{
+    font-size: 20px;
+    font-weight: 600;
+}
+.modal-content input{
+    background: rgb(67, 61, 61);
+    color: white;
+    padding: 15px;
+}
+.modal-content input::placeholder{
+    color: white;
+    fill: aqua;
+}

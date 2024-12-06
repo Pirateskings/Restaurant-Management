@@ -1,0 +1,143 @@
+ .header{
+    height: auto;
+    background: black;
+  }
+  #head{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .nav-item{
+    margin-top: 50px;
+    background: transparent !important;
+    color: white;
+    padding-right: 10px;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .nav-item a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Tangerine', serif;
+    font-size:25px;
+  }
+  .dropdown-menu{
+    background-color: black;
+  }
+  .dropdown-item{
+    font-size: 14px;
+    justify-content: center;
+    font-weight: 600;
+    background:black;
+    text-align: center;
+    padding: 8px;
+    transition: background 0.5s ease;
+  }
+  .dropdown-item:hover{
+    background-color: gray;
+  }
+  .nav-item form{
+      transform: translateX(75px);
+  }
+    .form-control{
+    width:300px;
+    height: 40px;
+    background: transparent;
+    color:aliceblue;
+  }
+  input[type="search"]::placeholder {
+    color: white;
+  }
+
+.newsel{
+   margin-top: 125px;
+  }
+  .newsel h1{
+    font-family: "Bad Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+.newsel form{
+  transform: translateX(150px);
+}
+.footer-branches{
+  margin-top: 200px;
+  margin-left: 50px;
+}
+.footer-icon{
+  text-align: right;
+  transition: 0.5s linear;
+}
+#facebook:hover{
+  background-color: blue;
+  border-radius: 20px;
+}
+#twitter:hover{
+  background-color: rgb(32, 166, 224);
+  border-radius: 20px;
+}
+#instagram:hover{
+  background-color: rgb(208, 42, 119);
+  border-radius: 20px;
+}
+#youtube:hover{
+  background-color: rgb(255, 8, 8);
+  border-radius: 20px;
+}
+#pinterest:hover{
+  background-color: rgb(255, 0, 93);
+  border-radius: 20px;
+}
+#branches{
+  transition:color 1s ease-in ;
+}
+.footer-header:hover{
+  font-family: "Borel", cursive;
+  font-weight: 600;
+  color:rgb(255, 0, 93) ;
+}
+.section{
+  margin-top: 300px;
+  transform: translateX(50px);
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  transform: translateX(50px); /* Vertically align the input and button */
+}
+
+.search-container input {
+  width: 300px;
+  margin-left: 10px; /* Space between input and button */
+  padding: 10px 10px;
+  border-radius: 4px;
+}
+
+.search-container button {
+  padding: 10px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background-color: #0056b3; /* Darker color on hover */
+}
+.search{
+  transform: translateX(80px);
+  height: 150px;
+  overflow-y: auto;
+}
+.search::-webkit-scrollbar,.search::-webkit-scrollbar-track{
+  background: transparent;
+}
+.search ::-webkit-scrollbar-thumb{
+  color: white;
+}
+.search img{
+  width: 80px;
+  height:80px;
+  object-fit: cover;
+}
+

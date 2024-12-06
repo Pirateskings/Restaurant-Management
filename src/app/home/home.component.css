@@ -1,0 +1,72 @@
+.home {
+    width: auto;
+    height: auto; 
+    margin: auto;
+    margin-bottom: -30px;
+}
+
+.carousel {
+    max-width:46%; 
+    height:550px; 
+    box-shadow: 0px 10px 10px black;
+    background: rgb(105, 102, 102);
+    margin-left: 20px;
+}
+
+.carousel-item img {
+    width: 100%; 
+    height: 550px; 
+    object-fit:cover; 
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+    width: 35px;
+    height: 100px;
+    border-radius: 50px;
+    border: 2px solid rgb(64, 222, 254);
+    background-color: rgba(255, 255, 255, 0.5);
+    filter: invert(1) brightness(0) contrast(1);
+}
+
+.container {
+    max-width: 50%; 
+    height: 550px;
+    color: aqua !important;
+    box-shadow: 0px 10px 10px black;
+    background: transparent;
+    background: url("/pexels-sebastian-189349.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.page {
+    padding: 2rem 1rem;
+    transform: translateY(100px);
+    border-radius: 0.5rem;
+    font-weight: 600 !important;
+}
+.animate__animated.animate__flipInY{
+    animation-timing-function: 5s;
+    animation-duration: 1s;;
+}
+.animate__animated.animate__flipInY:hover{
+    animation: none;
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        height: auto; 
+    }
+
+    .carousel-item img {
+        height: auto; 
+    }
+
+    .page {
+        transform: translateY(50px); 
+    }
+}

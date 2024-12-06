@@ -1,0 +1,193 @@
+<section class="py-3 bg-light">
+  <div class="container">
+
+    <!-- Contact Details Section -->
+    <div class="contact col-lg-6 ">
+      <div class="card border-0">
+        <button class="btn btn-primary col-md-8" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Contacts</button>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+          <div class="offcanvas-header">
+            <h3 class="offcanvas-title" id="offcanvasRightLabel">King of Taste</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body text-white fs-4">
+            <div class="text-center mb-4">
+              <img
+                src="https://th.bing.com/th/id/R.b8ba3497861b268304a96183828b743b?rik=vmElbQQsifo%2bMQ&riu=http%3a%2f%2fgallery.yopriceville.com%2fvar%2falbums%2fFree-Clipart-Pictures%2fDecorative-Elements-PNG%2fEmpty_Envelope_Transparent_PNG_Clip_Art.png%3fm%3d1495318499&ehk=R3WVhyESui00EKVTFbbOcCx9XBVo6twFHyN2qT0U7h0%3d&risl=&pid=ImgRaw&r=0"
+                alt="Envelope" class="img-fluid" />
+            </div>
+            <h3 class="text-center mb-3">Contact Details</h3>
+            <div class="accordion accordion-flush custom-accordion" id="contactAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingAddress">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseAddress" aria-expanded="false" aria-controls="collapseAddress">
+                    <i class="fa-solid fa-address-book me-2 text-primary"></i>
+                    Address
+                  </button>
+                </h2>
+                <div id="collapseAddress" class="accordion-collapse collapse" aria-labelledby="headingAddress"
+                  data-bs-parent="#contactAccordion">
+                  <div class="accordion-body">
+                    732/21 Second Street, Manchester, King Street, Kingston, United Kingdom
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingPhone">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsePhone" aria-expanded="false" aria-controls="collapsePhone">
+                    <i class="fa-solid fa-phone me-2 text-primary"></i>
+                    Phone No
+                  </button>
+                </h2>
+                <div id="collapsePhone" class="accordion-collapse collapse" aria-labelledby="headingPhone"
+                  data-bs-parent="#contactAccordion">
+                  <div class="accordion-body">
+                    8855477674
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingMail">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseMail" aria-expanded="false" aria-controls="collapseMail">
+                    <i class="fa-solid fa-envelope me-2 text-primary"></i>
+                    Mail
+                  </button>
+                </h2>
+                <div id="collapseMail" class="accordion-collapse collapse" aria-labelledby="headingMail"
+                  data-bs-parent="#contactAccordion">
+                  <div class="accordion-body">
+                    <a href="mailto:kingoftaste2024@gmail.com">kingoftaste2024&#64;gmail.com</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row align-items-center mb-5">
+        <!-- Map Section -->
+        <div class="col-lg-12">
+          <div class="embed-responsive embed-responsive-16by9 rounded">
+            <iframe class="embed-responsive-item"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d250581.02959892934!2d77.28422249201716!3d11.088869986032462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1728361304042!5m2!1sen!2sin"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Button to Open Complaint Modal -->
+    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#complaintModal">
+      File a Complaint
+    </button>
+
+    <!-- Complaint Modal -->
+    <div class="modal fade" id="complaintModal" tabindex="-1" aria-labelledby="complaintModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="complaintModalLabel">Complaint Box</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form (ngSubmit)="onSubmitComplaint()" class="complaintbox">
+              <div class="mb-3">
+                <label for="complaintName" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="complaintName" placeholder="Enter your name"
+                  [(ngModel)]="complaint.name" name="name" required>
+              </div>
+              <div class="mb-3">
+                <label for="complaintEmail" class="form-label">Your Email</label>
+                <input type="email" class="form-control" id="complaintEmail" placeholder="Enter your email"
+                  [(ngModel)]="complaint.email" name="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="complaintMessage" class="form-label">Your Complaint</label>
+                <textarea class="form-control" id="complaintMessage" rows="4" placeholder="Describe your issue"
+                  [(ngModel)]="complaint.message" name="message" required></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="complaintMessage" class="form-label">Date</label>
+                <input type="datetime-local" class="form-control"rows="4" placeholder="Date"
+                  [(ngModel)]="complaint.date" name="date" required>
+              </div>
+              <div class="mb-3">
+                <label for="complaintPriority" class="form-label">Priority Level</label>
+                <select class="form-select" id="complaintPriority" [(ngModel)]="complaint.priority" name="priority"
+                  required>
+                  <option value="" disabled selected>Select Priority</option>
+                  <option value="Low">Low</option>
+                  <option value="Medium">Medium</option>
+                  <option value="High">High</option>
+                </select>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Submit Complaint</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Get in Touch Section -->
+    <div class="get row">
+      <div class="col-lg-6 mx-auto">
+        <h3 class="text-center mb-4">Get In Touch</h3>
+        <form  (ngSubmit)="Oncontact()" class="p-4 border rounded shadow">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" name="name" class="form-control" [(ngModel)]="contact.name"
+              placeholder="*Your Name" required />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="email" class="form-control" [(ngModel)]="contact.email"
+              placeholder="*Your Email" required />
+          </div>
+          <div class="mb-3">
+            <label for="subject" class="form-label">Subject</label>
+            <select name="subject" id="subject" class="form-select" [(ngModel)]="contact.subject"
+              [ngModelOptions]="{ standalone: true }">
+              <option value="" disabled selected>Select Subject</option>
+              <option value="Any">Any</option>
+              <option value="Upcoming Event">Upcoming Event</option>
+              <option value="Book Table">Book Table</option>
+              <option value="Banquet">Banquet</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="form-label">Phone No</label>
+            <input type="tel" id="phone" name="phone" class="form-control" [(ngModel)]="contact.phone"
+              placeholder="*Phone No" required />
+          </div>
+          <div class="mb-3">
+            <label for="datetime" class="form-label">Date</label>
+            <input type="datetime-local" id="datetime" name="datetime" class="form-control" [(ngModel)]="contact.date"
+              min="2023-01-01T00:00" max="2025-12-31T23:59" />
+          </div>
+          <div class="mb-3">
+            <label for="sug" class="form-label">Any Suggestion</label>
+            <textarea name="suggestion" id="sug" class="form-control" rows="4" [(ngModel)]="contact.suggestion"
+              placeholder="*Any Suggestion"></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary px-4">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

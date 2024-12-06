@@ -1,0 +1,107 @@
+<body>
+    <div class="container py-5">
+        <div class="text-center mb-4">
+            <img src="https://th.bing.com/th/id/OIP.WnO8-cH2qP_9P1_Hzz_2jAHaD9?rs=1&pid=ImgDetMain"
+                alt="Logo" class="img-fluid">
+        </div>
+
+        <h1 class="text-center mb-4">Starters</h1>
+        <div class="row">
+            <div class="col-md-4 mb-4"
+                *ngFor="let item of menuItems; let i = index">
+                <div class="card h-100">
+                    <img [src]="item.image" class="card-img-top" alt="No image">
+                    <div class="card-body">
+                        <h5 class="card-title">{{item.name}}</h5>
+                        <p class="card-text d-flex justify-content-between">
+                            <span>{{item.price}}</span>
+                            <span>{{item.amt | currency: 'INR':'symbol'}}</span>
+                        </p>
+                        <a routerLink="/user/menu" routerLinkActive="active"
+                            class="btn btn-primary btn-sm"
+                            (click)="toggleStarters(i)">Read More</a>
+                    </div>
+                    <div class="card-footer bg-light"
+                        *ngIf="backendVisibleStarters[i]">
+                        <p>More Information About {{item.name}}...</p>
+                        <ul>
+                            <li
+                                *ngFor="let ingredient of item.ingredients">{{ingredient.name}}
+                                - {{ingredient.quantity}}</li>
+                        </ul>
+                        <button class="btn btn-danger btn-sm"
+                            (click)="closeToggleStarters(i)">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Dish Section -->
+        <h1 class="text-center my-4">Main Dish</h1>
+        <div class="row">
+            <div class="col-md-4 mb-4"
+                *ngFor="let item of menuItems; let i = index">
+                <div class="card h-100">
+                    <img [src]="item.image1" class="card-img-top"
+                        alt="No image">
+                    <div class="card-body">
+                        <h5 class="card-title">{{item.name1}}</h5>
+                        <p class="card-text d-flex justify-content-between">
+                            <span>{{item.price1}}</span>
+                            <span>{{item.amt1 | currency:
+                                'INR':'symbol'}}</span>
+                        </p>
+                        <a routerLink="/menu" routerLinkActive="active"
+                            class="btn btn-primary btn-sm"
+                            (click)="toggleMainDishes(i)">Read More</a>
+                    </div>
+                    <div class="card-footer bg-light"
+                        *ngIf="backendVisibleMainDishes[i]">
+                        <p>More Information About {{item.name1}}...</p>
+                        <ul>
+                            <li
+                                *ngFor="let ingredient of item.ingredients">{{ingredient.name}}
+                                - {{ingredient.quantity}}</li>
+                        </ul>
+                        <button class="btn btn-danger btn-sm"
+                            (click)="closeToggleMainDishes(i)">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Drinks Section -->
+        <h1 class="text-center my-4">Drinks</h1>
+        <div class="row">
+            <div class="col-md-4 mb-4"
+                *ngFor="let item of menuItems; let i = index">
+                <div class="card h-100">
+                    <img [src]="item.image2" class="card-img-top"
+                        alt="No image">
+                    <div class="card-body">
+                        <h5 class="card-title">{{item.name2}}</h5>
+                        <p class="card-text d-flex justify-content-between">
+                            <span>{{item.price2}}</span>
+                            <span>{{item.amt2 | currency:
+                                'INR':'symbol'}}</span>
+                        </p>
+                        <a routerLink="/menu" routerLinkActive="active"
+                            class="btn btn-primary btn-sm"
+                            (click)="toggleDrinks(i)">Read More</a>
+                    </div>
+                    <div class="card-footer bg-light"
+                        *ngIf="backendVisibleDrinks[i]">
+                        <p>More Information About {{item.name2}}...</p>
+                        <ul>
+                            <li
+                                *ngFor="let ingredient of item.ingredients">{{ingredient.name}}
+                                - {{ingredient.quantity}}</li>
+                        </ul>
+                        <button class="btn btn-danger btn-sm"
+                            (click)="closeToggleDrinks(i)">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,111 @@
+section{
+    background: url('/pexels-gabby-k-5709024.jpg');
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+}
+.modal-content {
+    border-radius: 10px;
+    background: rgb(117, 111, 111);
+    color: white;
+    font-weight: 600;
+  }
+
+  .form-control{
+    background: rgb(117, 111, 111);
+    color: white;
+  }
+  .form-select{
+    background: rgb(117, 111, 111);
+  }
+  .modal-header {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  textarea {
+    resize: none; 
+  }
+  
+.embed-responsive iframe{
+    width: 100%;
+    height: 600px;
+}
+.custom-accordion .accordion-item{
+  background-color: transparent;
+}
+.custom-accordion .accordion-button {
+  background-color: transparent; 
+  color: white;
+  border: none; 
+  box-shadow: none; 
+}
+
+.custom-accordion .accordion-button:not(.collapsed) {
+  background-color: rgba(0, 0, 0, 0.1); 
+}
+
+.custom-accordion .accordion-body {
+  background: rgb(255,255,255,0.6);
+  color: #000;
+}
+
+.contact{
+    width:100%;
+    background: transparent;
+}
+.accordion-button i {
+  font-size: 1.2rem;
+}
+.accordion-body a {
+  color: #0d6efd;
+  text-decoration: none;
+}
+.accordion-body a:hover {
+  text-decoration: underline;
+}
+
+.card{
+    width: 200px;
+    background: transparent !important;
+    position:relative;
+    top:100px;
+}
+.card button{
+    max-width: 100%;
+}
+.offcanvas-header{
+    background:transparent !important;
+}
+.offcanvas-body img{
+  width: 100px;
+}
+.offcanvas-body li{
+  text-align:justify;
+  justify-content: start;
+}
+.offcanvas-header h3{
+    font-family: "Great Vibes",cursive;
+    font-weight: 600;
+    transform: translateX(100px);
+}
+.offcanvas{
+    background: url('/pexels-polina-kovaleva-5430665.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mb-2 a{
+    text-decoration: none;
+    color: black;
+}
+.mb-2 a:hover{
+    color: aqua;
+}
+.get form{
+    background-color: rgb(117, 111, 111);
+    color: white !important;
+}

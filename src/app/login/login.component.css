@@ -1,0 +1,37 @@
+body{
+    background-image: url('/pexels-solodsha-7664817.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.loginform{
+    background:transparent !important;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 20px;
+}
+.modal-content{
+    width: 600px;
+    background:rgb(255,255,255,0.6);
+    font-weight: 500;
+}
+.form-contorl{
+    background:rgb(255,255,255,0.5) !important;
+    }
+.modal-content input,textarea{
+    background: transparent !important;
+}
+.modal-body input,.modal-body textarea{
+    color: rgb(0, 0, 0) !important;
+}
+.form-check-input1
+{
+    width: 15px;
+    height: 15px;
+    margin-right: 15px;
+}
+.registerform{
+    padding: 15px;
+}
+#regiister{
+    padding: 15px 10px;
+}
