@@ -1,0 +1,25 @@
+{
+  "routes": {
+    "/https://github.com/Pirateskings/Restaurant-Management": {},
+    "/https://github.com/Pirateskings/Restaurant-Management/admin": {},
+    "/https://github.com/Pirateskings/Restaurant-Management/admin/addemployee": {},
+    "/https://github.com/Pirateskings/Restaurant-Management/admin/admin-dashboard": {},
+    "/https://github.com/Pirateskings/Restaurant-Management/admin/adminabout": {},
+    "/https://github.com/Pirateskings/Restaurant-Management/admin/adminhome": {},
+    "/https://github.com/Pirateskings/Restaurant-Management/admin/adminmenu": {},
+    "/https://github.com/Pirateskings/Restaurant-Management/admin/adminservice": {},
+    "/https://github.com/Pirateskings/Restaurant-Management/admin/complaint": {},
+    "/https://github.com/Pirateskings/Restaurant-Management/admin/contact": {},
+    "/https://github.com/Pirateskings/Restaurant-Management/admin/feedback": {},
+    "/https://github.com/Pirateskings/Restaurant-Management/admin/newsle": {},
+    "/https://github.com/Pirateskings/Restaurant-Management/admin/reservation": {},
+    "/https://github.com/Pirateskings/Restaurant-Management/admin/salarycal": {},
+    "/https://github.com/Pirateskings/Restaurant-Management/admin/userlist": {},
+    "/https://github.com/Pirateskings/Restaurant-Management/login": {},
+    "/https://github.com/Pirateskings/Restaurant-Management/user": {},
+    "/https://github.com/Pirateskings/Restaurant-Management/user/about": {},
+    "/https://github.com/Pirateskings/Restaurant-Management/user/home": {},
+    "/https://github.com/Pirateskings/Restaurant-Management/user/menu": {},
+    "/https://github.com/Pirateskings/Restaurant-Management/user/service": {}
+  }
+}
