@@ -16,8 +16,8 @@ Role-based login with Admin and User roles.
 Backend:
 
 Spring Boot for RESTful APIs.
-CRUD operations (Create, Read, Update, Delete) for managing menu items.
-MySQL database for storing user and menu item data.
+CRUD operations (Create, Read, Update, Delete) for managing Employee data.
+MySQL database for storing user and Employee data.
 Authentication:
 
 Role-based authentication for Admin and User.
@@ -43,14 +43,6 @@ Development Tools:
 Visual Studio Code (for frontend development).
 Postman (for testing RESTful APIs).
 
-Version Control:
-
-Git (for version control and collaboration).
-GitHub (for repository hosting).
-
-
-Here's a basic README.md file template for your Restaurant Management System project, describing the frontend (Angular, HTML, CSS, Bootstrap), backend (Spring Boot with CRUD operations and MySQL), and development tools (Visual Studio Code). You can modify it further as needed:
-
 Restaurant Management System
 Description
 A Restaurant Management System that provides functionalities for managing restaurant operations. The system has a frontend developed using Angular with HTML, CSS, and Bootstrap, while the backend is powered by Spring Boot with CRUD operations and MySQL for database management. The system includes user authentication with roles for Admin and User.
@@ -66,24 +58,27 @@ Role-based login with Admin and User roles.
 Backend:
 
 Spring Boot for RESTful APIs.
-CRUD operations (Create, Read, Update, Delete) for managing menu items.
-MySQL database for storing user and menu item data.
+CRUD operations (Create, Read, Update, Delete) for managing Employee Data.
+MySQL database for storing user and Employee data.
 Authentication:
 
 Role-based authentication for Admin and User.
-Admin has full access to manage the restaurant menu and user accounts.
+Admin has full access to manage the restaurant Employee and user accounts.
 User can view the menu and place orders.
+
 Tools & Technologies
+
 Frontend:
 Angular (for building the SPA).
 HTML, CSS (for styling).
 Bootstrap (for responsive design).
+
 Backend:
 Spring Boot (for developing REST APIs).
 MySQL (for database management).
 Development Tools:
 Visual Studio Code (for frontend development).
-IntelliJ IDEA (or any Java IDE) for backend development.
+Java for backend development.
 Postman (for testing RESTful APIs).
 
 Version Control:
