@@ -62,6 +62,7 @@ Built with Angular.
 Responsive UI using Bootstrap for a seamless experience across devices.
 Search functionality for menu items.
 Role-based login with Admin and User roles.
+
 Backend:
 
 Spring Boot for RESTful APIs.
