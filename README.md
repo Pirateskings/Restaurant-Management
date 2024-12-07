@@ -94,11 +94,13 @@ Authentication:-
 Admin login:
 
 Username: Admin
+Email : ram@gmail.com
 Password: 123456
 
 User login:
 
 Username: Ram123
+Email : ram040029@gmail.com
 Password: 123456
 
 
